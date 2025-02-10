@@ -6,8 +6,8 @@ import "../styles/global.css";
 const noto = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Title", // TODO: Change the title
-  description: "Description" // TODO: Change the description
+  title: "Cookie Consent",
+  description: "Cookie consent example",
 };
 
 export default function RootLayout({

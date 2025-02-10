@@ -967,6 +967,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cookie-consent@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "cookie-consent@workspace:."
+  dependencies:
+    "@formkit/auto-animate": "npm:^0.8.2"
+    "@types/node": "npm:^20.17.9"
+    "@types/react": "npm:^18.3.12"
+    "@types/react-dom": "npm:^18.3.1"
+    autoprefixer: "npm:^10.4.16"
+    class-variance-authority: "npm:^0.7.1"
+    eslint: "npm:^8.57.1"
+    eslint-config-next: "npm:^15.0.3"
+    lucide-react: "npm:^0.464.0"
+    next: "npm:14.2.20"
+    postcss: "npm:^8.4.49"
+    prettier: "npm:^3.4.2"
+    prettier-plugin-tailwindcss: "npm:^0.6.9"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
+    tailwind-merge: "npm:^3.0.1"
+    tailwindcss: "npm:^3.4.1"
+    tailwindcss-animate: "npm:^1.0.7"
+    typescript: "npm:^5.7.2"
+  languageName: unknown
+  linkType: soft
+
 "cross-spawn@npm:^7.0.0, cross-spawn@npm:^7.0.2":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
@@ -3644,32 +3670,6 @@ __metadata:
   checksum: 53d010d2a1b014fb60d398c095f43912c353b7b44774e55222bb26fd428bc75b73d7bdfcae509ce927c23ca9c5aff2dc1bc82f191d30e57a879550bc2952bdb0
   languageName: node
   linkType: hard
-
-"starter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "starter@workspace:."
-  dependencies:
-    "@formkit/auto-animate": "npm:^0.8.2"
-    "@types/node": "npm:^20.17.9"
-    "@types/react": "npm:^18.3.12"
-    "@types/react-dom": "npm:^18.3.1"
-    autoprefixer: "npm:^10.4.16"
-    class-variance-authority: "npm:^0.7.1"
-    eslint: "npm:^8.57.1"
-    eslint-config-next: "npm:^15.0.3"
-    lucide-react: "npm:^0.464.0"
-    next: "npm:14.2.20"
-    postcss: "npm:^8.4.49"
-    prettier: "npm:^3.4.2"
-    prettier-plugin-tailwindcss: "npm:^0.6.9"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
-    tailwind-merge: "npm:^3.0.1"
-    tailwindcss: "npm:^3.4.1"
-    tailwindcss-animate: "npm:^1.0.7"
-    typescript: "npm:^5.7.2"
-  languageName: unknown
-  linkType: soft
 
 "streamsearch@npm:^1.1.0":
   version: 1.1.0

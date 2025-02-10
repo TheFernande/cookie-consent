@@ -1,7 +1,7 @@
 {
-  "name": "starter",
+  "name": "cookie-consent",
   "version": "0.1.0",
-  "description": "A starter project for Next.js with Tailwind CSS",
+  "description": "A cookie consent component",
   "private": true,
   "author": "Jade Hernandez",
   "license": "ISC",
