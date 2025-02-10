@@ -1,9 +1,9 @@
-import HelloWorld from "@/components/hello-world";
+import CookieConsent from "@/components/cookie-consent";
 
 export default function Home() {
   return (
     <main className='gfe-main'>
-      <HelloWorld />
+      <CookieConsent />
     </main>
   );
 }

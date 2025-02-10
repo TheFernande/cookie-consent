@@ -43,5 +43,8 @@
   "typescript.suggest.completeFunctionCalls": true,
   "typescript.suggest.paths": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

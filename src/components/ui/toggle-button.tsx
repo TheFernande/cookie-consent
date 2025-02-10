@@ -1,6 +1,6 @@
-import { forwardRef } from "react";
-import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { VariantProps, cva } from "class-variance-authority";
+import { forwardRef } from "react";
 
 
 const toggleVariants = cva(
@@ -61,8 +61,6 @@ const ToggleSwitch = forwardRef<HTMLButtonElement, ToggleSwitchProps>((props, re
     className,
     ...rest
   } = props;
-  // ({ checked = false, onCheckedChange, disabled = false, size, className, ...props }, ref) => {
-  console.log('Component Props:', { checked, disabled, size });
 
   const handleToggle = () => {
     console.log('Toggle clicked. Current state:', {
@@ -86,7 +84,7 @@ const ToggleSwitch = forwardRef<HTMLButtonElement, ToggleSwitchProps>((props, re
       onClick={handleToggle}
       className={cn(
         toggleVariants({ size }),
-        checked ? "bg-indigo-700" : "bg-gray-200",
+        checked && !disabled ? "bg-indigo-700" : "bg-gray-100",
         disabled ? "cursor-not-allowed opacity-50" : "cursor-pointer",
         className
       )}
@@ -94,7 +92,10 @@ const ToggleSwitch = forwardRef<HTMLButtonElement, ToggleSwitchProps>((props, re
     >
       <span
         data-checked={checked}
-        className={cn(thumbVariants({ size }))}
+        className={cn(
+          thumbVariants({ size }),
+          disabled ? "bg-gray-300" : "bg-white"
+        )}
       />
     </button>
   );

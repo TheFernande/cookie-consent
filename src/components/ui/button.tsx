@@ -1,11 +1,11 @@
 // src/components/ui/button.tsx
-import { ButtonHTMLAttributes, cloneElement, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
+import { ButtonHTMLAttributes, cloneElement, forwardRef } from "react";
 
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "flex items-center font-medium",
+  "flex items-center font-medium justify-center transition-all",
   {
     variants: {
       variant: {
