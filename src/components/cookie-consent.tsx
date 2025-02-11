@@ -40,7 +40,7 @@ export default function CookieConsent() {
   }, [essentialsConsent, analyticsConsent, marketingConsent])
 
   return (
-    <div className="w-full h-fit bg-white p-4 flex flex-col justify-start items-center gap-6 fixed bottom-0 left-0 right-0 z-50">
+    <div className="w-full h-fit bg-white p-4 flex flex-col justify-start items-center gap-6 fixed bottom-0 left-0 right-0 z-50 md:py-6 md:px-8 lg:px-28 ">
       <div className="flex flex-col gap-1">
         <span className="text-base text-neutral-900 font-semibold">We use cookies</span>
         <p className="text-sm text-neutral-600">
@@ -50,8 +50,8 @@ export default function CookieConsent() {
           </Link>
         </p>
       </div>
-      <div className="flex gap-2 flex-col w-full">
-        <div className="flex gap-2  flex-col">
+      <div className="flex gap-2 flex-col w-full  md:flex-row-reverse justify-between ">
+        <div className="flex gap-2  flex-col md:flex-row md:gap-4">
           <Button
             size='lg'
             variant='primary'
