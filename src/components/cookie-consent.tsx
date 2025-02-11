@@ -68,7 +68,7 @@ export default function CookieConsent() {
           />
         </div>
         <Button
-          size='lg'
+          size='md'
           variant='destructive'
           textContent="Decline All"
           onClick={() => {
