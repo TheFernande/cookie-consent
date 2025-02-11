@@ -30,10 +30,10 @@ export default function CookieModal(props: ICookieModalProps) {
 
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
       <div
         ref={modalRef}
-        className="w-full max-w-md bg-white p-6 shadow-xl mx-4 flex flex-col gap-6"
+        className="w-full max-w-[340px] bg-white p-6 shadow-xl mx-4 flex flex-col gap-6 md:max-w-[458px] lg:max-w-[384px]"
       >
         <div className="flex">
           <div className="flex w-full flex-col">
@@ -90,9 +90,9 @@ export default function CookieModal(props: ICookieModalProps) {
         </div>
 
         <div className="flex flex-col gap-2">
-          <div className="flex gap-2 w-full">
+          <div className="flex gap-2 w-full ">
             <Button
-              size='lg'
+              size='md'
               variant='primary'
               textContent="Accept All"
               className="flex-1"
@@ -102,7 +102,7 @@ export default function CookieModal(props: ICookieModalProps) {
               }}
             />
             <Button
-              size='lg'
+              size='md'
               variant='secondary'
               textContent="Save"
               className="flex-1"

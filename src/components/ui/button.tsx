@@ -52,7 +52,7 @@ const buttonVariants = cva(
       },
       size: {
         md: "gap-1 rounded px-4 py-[10px] text-sm",
-        lg: "gap-[6px] rounded px-[18px] py-[10px] text-base",
+        lg: "gap-[6px] rounded px-[38px] py-[10px] text-base",
         xl: "gap-[6px] rounded px-[22px] py-3 text-base",
         "2xl": "gap-[10px] rounded px-[26px] py-4 text-lg",
         "icon-2xl": "gap-[10px] rounded p-4 text-lg",
