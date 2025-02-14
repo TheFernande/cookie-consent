@@ -46,6 +46,7 @@ const buttonVariants = cva(
           "disabled:cursor-not-allowed disabled:fill-neutral-400 disabled:text-neutral-400"
         ],
         destructive: [
+          "w-full md:w-fit",
           "bg-red-600 fill-white text-white",
           "hover:bg-red-700 focus:bg-red-700",
           "focus:shadow-[0_0px_0px_1px_rgba(217,45,32,1),0_0px_0px_4px_rgba(217,45,32,0.12)]",
