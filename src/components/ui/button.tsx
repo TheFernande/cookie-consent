@@ -5,11 +5,12 @@ import { ButtonHTMLAttributes, cloneElement, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "flex items-center font-medium justify-center transition-all",
+  "flex items-center font-medium justify-center transition-all h-fit min-w-fit",
   {
     variants: {
       variant: {
         primary: [
+          "w-full flex-1",
           "bg-indigo-700 fill-white text-white",
           "shadow-[0_1px_3px_rgba(0,0,0,0.10),0_1px_2px_rgba(0,0,0,0.06)]",
           "hover:bg-indigo-800 hover:shadow-[0_1px_3px_rgba(0,0,0,0.10),0_1px_2px_rgba(0,0,0,0.06)]",
@@ -17,6 +18,7 @@ const buttonVariants = cva(
           "disabled:cursor-not-allowed disabled:bg-neutral-100 disabled:fill-neutral-400 disabled:text-neutral-400"
         ],
         secondary: [
+          "max-h-[44px] w-full flex-1",
           "border-[0.5px] border-neutral-200 bg-white fill-neutral-900 text-neutral-900",
           "shadow-[0_1px_3px_rgba(0,0,0,0.10),0_1px_2px_rgba(0,0,0,0.06)]",
           "hover:border hover:border-neutral-200 hover:bg-neutral-50",
@@ -51,7 +53,7 @@ const buttonVariants = cva(
         ]
       },
       size: {
-        md: "gap-1 rounded px-4 py-[10px] text-sm",
+        md: "gap-1 rounded px-[14px] py-[10px] text-sm",
         lg: "gap-[6px] rounded px-[38px] py-[10px] text-base",
         xl: "gap-[6px] rounded px-[22px] py-3 text-base",
         "2xl": "gap-[10px] rounded px-[26px] py-4 text-lg",
@@ -104,13 +106,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(
           buttonVariants({ variant, size }),
+          variant === "secondary" && size === "lg" && "px-7",
           className
         )}
         disabled={isDisabled}
         {...props}
       >
         {iconPosition === "left" && renderedIcon}
-        {textContent}
+        <span className={cn(variant === "primary" && "px-[1px]")}>{textContent}</span>
         {iconPosition === "right" && renderedIcon}
       </button>
     );
