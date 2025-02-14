@@ -1,7 +1,7 @@
 "use client";
 
 import { useFocusTrap } from "@/hooks/use-focus-trap";
-import { useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { ToggleSwitch } from "./ui/toggle-button";
 
@@ -27,6 +27,34 @@ export default function CookieModal(props: ICookieModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useFocusTrap(modalRef, isModalOpen);
+
+  // Memoize handlers with useCallback
+  const handleClickOutside = useCallback((event: MouseEvent) => {
+    if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+      setIsModalOpen(false);
+    }
+  }, [setIsModalOpen]); // Add dependency
+
+  const handleKeyDown = useCallback((event: KeyboardEvent) => {
+    if (event.key === 'Escape') {
+      setIsModalOpen(false);
+    }
+  }, [setIsModalOpen]); // Add dependency
+
+  useEffect(() => {
+    // Add event listeners when modal is open
+    if (isModalOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleKeyDown);
+    }
+
+    // Cleanup function to remove event listeners
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isModalOpen, handleClickOutside, handleKeyDown]); // Add all dependencies
+
 
 
   return (
